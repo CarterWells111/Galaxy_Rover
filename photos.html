@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Rover 照片与视频</title>
+    <script>
+        window.onload = function() {
+            let body = document.body;
+            let opacity = 0;
+            let position = 20;
+            
+            const fadeIn = setInterval(() => {
+                if (opacity >= 1) clearInterval(fadeIn);
+                body.style.opacity = opacity;
+                body.style.transform = `translateY(${position}px)`;
+                opacity += 0.03;
+                position -= 0.6;
+            }, 16);
+
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.onmouseover = () => link.style.color = '#00b4d8';
+                link.onmouseout = () => link.style.color = 'white';
+            });
+        };
+    </script>
+</head>
+<body style="background-color: black; color: white; font-family: 'Microsoft YaHei'; line-height: 1.6; opacity: 0; transform: translateY(20px); margin: 0; padding: 0;">
+
+    <header style="position: fixed; width: 100%; top: 0; background: rgba(0,0,0,0.9); z-index: 1000;">
+        <nav style="margin-top: 0.2rem;">
+            <ul style="display: flex; justify-content: center; gap: 2rem; list-style: none; margin: 0; padding: 0;">
+                <li><a href="GalaxyRover.html" style="color: white; text-decoration: none; font-size: 1.1rem;">主页</a></li>
+                <li><a href="team.html" style="color: white; text-decoration: none; font-size: 1.1rem;">团队介绍</a></li>
+                <li><a href="rockets.html" style="color: white; text-decoration: none; font-size: 1.1rem;">火箭介绍</a></li>
+                <li><a href="photos.html" style="color: white; text-decoration: none; font-size: 1.1rem;">照片与视频</a></li>
+                <li><a href="GalaxyRover.html#contact" style="color: white; text-decoration: none; font-size: 1.1rem;">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+        
+    <main style="margin-top: 50px; padding: 2rem;">
+        <section style="text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: #00b4d8;">照片与视频</h2>
+            <div style="margin: 2rem auto; max-width: 800px;">
+                <video width=500px height=auto controls style="margin: 1rem; border-radius: 10px;">
+                    <source src="C:\Users\Administrator\Desktop\Microsoft VS Code\网站\照片\照片\aea142d0e8e10ab387c18ef1147c6214.mp4" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+                <video width=500px height=auto controls style="margin: 1rem; border-radius: 10px;">
+                    <source src="C:\Users\Administrator\Desktop\Microsoft VS Code\网站\照片\照片\b746d1bb04c6c0fd04977d045e0411c8.mp4" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+
+                <img src="./照片/照片/全箭仿真.jpg" alt="全箭仿真" 
+                    style="width: 100%; max-width: 600px; height: auto; margin: 1rem; border-radius: 10px;">
+                <img src="./照片/照片/签名拍照.jpg" alt="PIONEER I签名照" 
+                    style="width: 100%; max-width: 600px; height: auto; margin: 1rem; border-radius: 10px;">
+                <img src="./照片/照片/试车近照.jpg" alt="试车近照" 
+                    style="width: 100%; max-width: 600px; height: auto; margin: 1rem; border-radius: 10px;">
+                <img src="C:\Users\Administrator\Desktop\Microsoft VS Code\网站\照片\照片\24b4a56e4c893187fd5823e5ac01e7e.jpg" alt="发射" 
+                    style="width: 100%; max-width: 600px; height: auto; margin: 1rem; border-radius: 10px;">
+                <img src="C:\Users\Administrator\Desktop\Microsoft VS Code\网站\照片\照片\80f0bcbacc858b65f6940ae9906a9c9.jpg" alt="喷漆" 
+                    style="width: 100%; max-width: 600px; height: auto; margin: 1rem; border-radius: 10px;">
+                <img src="C:\Users\Administrator\Desktop\Microsoft VS Code\网站\照片\照片\d2f975de8e1a7444fe4c4e55f73f261.jpg" alt="硝酸钾提纯" 
+                    style="width: 100%; max-width: 600px; height: auto; margin: 1rem; border-radius: 10px;">
+                <img src="C:\Users\Administrator\Desktop\Microsoft VS Code\网站\照片\照片\68369b9f3e2447302f9fbab0db43178.jpg" alt="航电收尾检查" 
+                    style="width: 100%; max-width: 600px; height: auto; margin: 1rem; border-radius: 10px;">
+                <img src="C:\Users\Administrator\Desktop\Microsoft VS Code\网站\照片\照片\2544c6926702b5f471f1daf3f85af5a.jpg" alt="烧损喷管" 
+                    style="width: 100%; max-width: 600px; height: auto; margin: 1rem; border-radius: 10px;">
+                <img src="C:\Users\Administrator\Desktop\Microsoft VS Code\网站\照片\照片\4b3ff779e0aa64bdbdea23ee72d6f2e.jpg" alt="烧损试车台" 
+                    style="width: 100%; max-width: 600px; height: auto; margin: 1rem; border-radius: 10px;">
+                <img src="C:\Users\Administrator\Desktop\Microsoft VS Code\网站\照片\照片\9b56a4dd1601c62ddbf776d1f23f118.jpg" alt="玩火" 
+                    style="width: 100%; max-width: 600px; height: auto; margin: 1rem; border-radius: 10px;">
+                <img src="C:\Users\Administrator\Desktop\Microsoft VS Code\网站\照片\照片\12e55a4a9962f5a0fd08b3cc4f9d36b.jpg" alt="熬燃料" 
+                    style="width: 100%; max-width: 600px; height: auto; margin: 1rem; border-radius: 10px;">
+
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; background: black; margin-top: 4rem; color: rgba(255,255,255,0.5);">
+        <p>© 2025 GalaxyRover. 保留所有权利。</p>
+    </footer>
+</body>
+</html>

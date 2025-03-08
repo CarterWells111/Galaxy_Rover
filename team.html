@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GalaxyRover 团队介绍</title>
+    <script>
+        window.onload = function() {
+            let body = document.body;
+            let opacity = 0;
+            let position = 20;
+            
+            const fadeIn = setInterval(() => {
+                if (opacity >= 1) clearInterval(fadeIn);
+                body.style.opacity = opacity;
+                body.style.transform = `translateY(${position}px)`;
+                opacity += 0.03;
+                position -= 0.6;
+            }, 16);
+
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.onmouseover = () => link.style.color = '#00b4d8';
+                link.onmouseout = () => link.style.color = 'white';
+            });
+        };
+    </script>
+</head>
+<body style="background-color: black; color: white; font-family: 'Microsoft YaHei'; line-height: 1.6; opacity: 0; transform: translateY(20px); margin: 0; padding: 0;">
+
+    <header style="position: fixed; width: 100%; top: 0; background: rgba(0,0,0,0.9); z-index: 1000;">
+        <nav style="margin-top: 0.2rem;">
+            <ul style="display: flex; justify-content: center; gap: 2rem; list-style: none; margin: 0; padding: 0;">
+                <li><a href="GalaxyRover.html" style="color: white; text-decoration: none; font-size: 1.1rem;">主页</a></li>
+                <li><a href="team.html" style="color: white; text-decoration: none; font-size: 1.1rem;">团队介绍</a></li>
+                <li><a href="rockets.html" style="color: white; text-decoration: none; font-size: 1.1rem;">火箭介绍</a></li>
+                <li><a href="photos.html" style="color: white; text-decoration: none; font-size: 1.1rem;">照片与视频</a></li>
+                <li><a href="GalaxyRover.html#contact" style="color: white; text-decoration: none; font-size: 1.1rem;">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="margin-top: 50px; padding: 2rem;">
+        <section style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: #00b4d8;">我们的团队</h2>
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px;">
+                <h3 style="font-size: 2rem; color: #00b4d8;">梁之琪</h3>
+                <p style="margin-top: 1rem;">社团总负责人，负责火箭的总体设计和制造。</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px;">
+                <h3 style="font-size: 2rem; color: #00b4d8;">陈思源</h3>
+                <p style="margin-top: 1rem;">推进部门，负责火箭发动机设计和燃料制造。</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px;">
+                <h3 style="font-size: 2rem; color: #00b4d8;">顾禾阳</h3>
+                <p style="margin-top: 1rem;">气动部门，负责火箭的气动外形优化与飞行模拟。</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px;">
+                <h3 style="font-size: 2rem; color: #00b4d8;">王锦添</h3>
+                <p style="margin-top: 1rem;">航电部门与宣传部门，负责火箭航电硬件开发；社团网站制作，渲染等宣传工作。</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px;">
+                <h3 style="font-size: 2rem; color: #00b4d8;">李由</h3>
+                <p style="margin-top: 1rem;">结构部门，负责火箭总体建模，姿控与伞舱结构设计。</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px;">
+                <h3 style="font-size: 2rem; color: #00b4d8;">郑易初</h3>
+                <p style="margin-top: 1rem;">航电部门，负责火箭航电硬件开发。</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px;">
+                <h3 style="font-size: 2rem; color: #00b4d8;">柴奕如</h3>
+                <p style="margin-top: 1rem;">代码部门，负责火箭姿控部分代码编写。</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px;">
+                <h3 style="font-size: 2rem; color: #00b4d8;">蒋琢</h3>
+                <p style="margin-top: 1rem;">宣传部门，负责火箭纪录片规划与拍摄。</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px;">
+                <h3 style="font-size: 2rem; color: #00b4d8;">刘娅萱</h3>
+                <p style="margin-top: 1rem;">财务部门，负责记录社团开支与报销。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; background: black; margin-top: 4rem; color: rgba(255,255,255,0.5);">
+        <p>© 2025 GalaxyRover. 保留所有权利。</p>
+    </footer>
+</body>
+</html>

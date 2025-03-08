@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Rover 火箭组织</title>
+    <script>
+        // 页面加载完成后执行动画
+        window.onload = function() {
+            let body = document.body;
+            let opacity = 0;
+            let position = 20;
+            
+            // 渐变动画
+            const fadeIn = setInterval(() => {
+                if (opacity >= 1) clearInterval(fadeIn);
+                body.style.opacity = opacity;
+                body.style.transform = `translateY(${position}px)`;
+                opacity += 0.03;
+                position -= 0.6;
+            }, 16);
+
+            // 添加导航栏悬停效果
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.onmouseover = () => link.style.color = '#00b4d8';
+                link.onmouseout = () => link.style.color = 'white';
+            });
+        };
+    </script>
+</head>
+<body style="background-color: black; color: white; font-family: 'Microsoft YaHei', sans-serif; line-height: 1.4; opacity: 0; transform: translateY(20px); margin: 0; padding: 0;">
+
+    <!-- 页眉部分 -->
+    <header style="position: fixed; width: 100%; top: 0; background: rgba(0,0,0,0.9); z-index: 1000;">
+        <nav style="margin-top: 0.2rem;">
+            <ul style="display: flex; justify-content: center; gap: 2rem; list-style: none; margin: 0; padding: 0;">
+                <li><a href="GalaxyRover.html" style="color: white; text-decoration: none; font-size: 1.1rem;">主页</a></li>
+                <li><a href="team.html" style="color: white; text-decoration: none; font-size: 1.1rem;">团队介绍</a></li>
+                <li><a href="rockets.html" style="color: white; text-decoration: none; font-size: 1.1rem;">火箭介绍</a></li>
+                <li><a href="photos.html" style="color: white; text-decoration: none; font-size: 1.1rem;">照片与视频</a></li>
+                <li><a href="GalaxyRover.html#contact" style="color: white; text-decoration: none; font-size: 1.1rem;">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主体部分 -->
+    <section style="margin-top: 50px; padding: 2rem;display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+        <section style="text-align: center;">
+            <h2 style="font-size: 8rem; margin-bottom: 2rem; color: #00b4d8;">Galaxy Rover</h2>
+            <br>
+        <div style="max-width: 800px; padding: 2rem;position: relative;">
+            <img src=".\照片\照片\社团LOGO.jpg" alt="社团标志"
+                style="width: 800px; height: 600px; margin-bottom: 2rem; border-radius: 10px;position: relative; z-index: 1;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 20%; background: linear-gradient(to top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 50%); opacity: 1; border-radius: 10px 10px 0 0; z-index: 2;">
+                </div>
+                <div style="position: absolute; top: 400px; left: 0; width: 100%; height: 30%; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 50%); opacity: 1; border-radius: 0 0 10px 10px; z-index: 2;">
+                </div>
+                <div style="position: absolute; top: 0; left: 0; width: 10%; height: 80%; background: linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 70%); opacity: 1; border-radius: 10px 0 0 10px; z-index: 2;">
+                </div>
+                <div style="position: absolute; top: 0; right: 0; width: 10%; height: 80%; background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 70%); opacity: 1; border-radius: 0 10px 10px 0; z-index: 2;">
+                </div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #00b4d8; white-space: nowrap;">
+                    "The universe was born in nothingness."
+                </h2>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #00b4d8; white-space: nowrap;"></h2>
+        <p style="font-size: 1.5rem;">加入 Galaxy Rover，起点地球，目标火星！</p>
+        </div>
+    </section>
+    <br><br>
+    
+        <!-- 联系我们 -->
+        <section id="contact" style="padding: 4rem 0; text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: #00b4d8;">联系我们</h2>
+            <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 10px; max-width: 500px; margin: 0 auto;">
+                <p>社长联系方式：</p>
+                <p>电子邮件：carterwells0000@qq.com</p>
+                <p>微信：CarterWells070224</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚部分 -->
+    <footer style="text-align: center; padding: 2rem; background: black; margin-top: 4rem; color: rgba(255,255,255,0.5);">
+        <p>© 2025 GalaxyRover. 保留所有权利。</p>
+    </footer>
+</body>
+</html>
